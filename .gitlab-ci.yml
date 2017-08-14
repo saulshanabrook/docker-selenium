@@ -3,6 +3,9 @@ image: docker:latest
 services:
   - docker:dind
 
+variables:
+  DOCKER_DRIVER: overlay
+
 before_script:
   - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
 
@@ -11,9 +14,9 @@ build:
   script:
     - docker build -t selenium/base:3.4.0-francium Base
     - docker build -t selenium/node-base:3.4.0-francium NodeBase
-    - docker build -t selenium/node-firefox:3.4.0-francium \
-                   --build-arg FIREFOX_APPLICATION=devedition \
-                   --build-arg FIREFOX_VERSION=56.0b2 \
+    - docker build -t selenium/node-firefox:3.4.0-francium
+                   --build-arg FIREFOX_APPLICATION=devedition
+                   --build-arg FIREFOX_VERSION=56.0b2
                    NodeFirefox
     - docker build -t "$CI_REGISTRY_IMAGE" NodeFirefoxDebug
     - docker push "$CI_REGISTRY_IMAGE"
