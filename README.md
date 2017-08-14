@@ -1,7 +1,7 @@
 Fork of [/github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
 to support Firefox Dev Edition, until [it does](https://github.com/SeleniumHQ/docker-selenium/issues/536).
 
-Use `registry.gitlab.com/passit/docker-selenium` as the Firefox Developer Edition node debug image.
+Use `registry.gitlab.com/passit/docker-selenium` as the Firefox Developer Edition standalone debug image.
 
 ---
 
