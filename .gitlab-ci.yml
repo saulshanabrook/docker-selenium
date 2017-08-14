@@ -19,5 +19,5 @@ build:
                    --build-arg FIREFOX_VERSION=56.0b2
                    NodeFirefox
     - docker build -t selenium/node-firefox-debug:3.4.0-francium NodeFirefoxDebug
-    - docker built -t "$CI_REGISTRY_IMAGE" StandaloneFirefoxDebug
+    - docker build -t "$CI_REGISTRY_IMAGE" StandaloneFirefoxDebug
     - docker push "$CI_REGISTRY_IMAGE"
