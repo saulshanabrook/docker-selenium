@@ -1,3 +1,10 @@
+Fork of [/github.com/SeleniumHQ/docker-selenium](https://github.com/SeleniumHQ/docker-selenium)
+to support Firefox Dev Edition, until [it does](https://github.com/SeleniumHQ/docker-selenium/issues/536).
+
+Use `registry.gitlab.com/passit/docker-selenium` as the Firefox Developer Edition node debug image.
+
+---
+
 # Selenium Docker
 
 The project is made possible by volunteer contributors who have put in thousands of hours of their own time, and made the source code freely available under the [Apache License 2.0](https://github.com/SeleniumHQ/docker-selenium/blob/master/LICENSE.md).
@@ -25,7 +32,7 @@ Images included:
 - __selenium/node-chrome-debug__: Selenium node with Chrome installed and runs a VNC server, needs to be connected to a Selenium Grid Hub
 - __selenium/node-firefox-debug__: Selenium node with Firefox installed and runs a VNC server, needs to be connected to a Selenium Grid Hub
 
-## 
+##
 
 ## Running the images
 
@@ -89,7 +96,7 @@ $ docker run -d -p 4444:4444 -e SE_OPTS="-debug true" --name selenium-hub seleni
 You can pass `HUB_PORT_4444_TCP_ADDR` and `HUB_PORT_4444_TCP_PORT` options to provide the hub address to a node when needed.
 
 ``` bash
-$ docker run -d -p 4444:4444 -e HUB_PORT_4444_TCP_ADDR=10.10.1.10 -e HUB_PORT_4444_TCP_PORT=4444 \ 
+$ docker run -d -p 4444:4444 -e HUB_PORT_4444_TCP_ADDR=10.10.1.10 -e HUB_PORT_4444_TCP_PORT=4444 \
     --name selenium-hub selenium/hub:3.4.0-francium
 ```
 
