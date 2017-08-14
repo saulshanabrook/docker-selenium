@@ -17,6 +17,7 @@ build:
     - docker build -t selenium/node-firefox:3.4.0-francium
                    --build-arg FIREFOX_APPLICATION=devedition
                    --build-arg FIREFOX_VERSION=56.0b2
+                   --build-arg GECKODRIVER_VERSION=0.18.0
                    NodeFirefox
     - docker build -t selenium/node-firefox-debug:3.4.0-francium NodeFirefoxDebug
     - cp StandaloneDebug/entry_point.sh StandaloneFirefoxDebug/
